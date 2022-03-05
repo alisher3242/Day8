@@ -8,6 +8,7 @@
     &__flow{
         flex-direction: column;
         justify-content: flex-end;
+        flex: 1;
         @include chats-padding (0, 12px,24px,12px);
 
     }
@@ -15,7 +16,7 @@
 
 .chat{
     color: #333333;
-    min-width: 200px;
+    // min-width: 200px;
     border-radius: 4px;
     @include chats-margin(4px,0,4px,0);
     @include chats-padding(12px, 12px,12px,12px);
@@ -35,7 +36,7 @@
 
     &__right{
         text-align: right;
-        align-self: flex-end;
+        margin-left: auto;
 
         &::before {
             @include before(0,-7px,none,none);
