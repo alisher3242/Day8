@@ -1,0 +1,50 @@
+.chats{
+    background-image: url(../images/bg-image.png);
+    height: 700px;
+    @include chats-padding (0,0,0,0);
+    @include chats-margin(0,auto,0,auto);
+    @include chats(pink, 500px);
+
+    &__flow{
+        flex-direction: column;
+        justify-content: flex-end;
+        @include chats-padding (0, 12px,24px,12px);
+
+    }
+}
+
+.chat{
+    color: #333333;
+    min-width: 200px;
+    border-radius: 4px;
+    @include chats-margin(4px,0,4px,0);
+    @include chats-padding(12px, 12px,12px,12px);
+    @include chats(white, 80%);
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 0;
+        display: block;
+        border-top: 12px solid #ffffff;
+        border-right: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 12px solid transparent;
+    }
+
+    &__right{
+        text-align: right;
+        align-self: flex-end;
+
+        &::before {
+            @include before(0,-7px,none,none);
+          }
+    }
+
+    &__left{
+        &::before {
+            @include before(0,none,none,-7px);
+          }
+    }
+}

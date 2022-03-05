@@ -1,0 +1,27 @@
+@mixin chats($bgc, $mw) {
+    background-color: $bgc;
+    position: relative;
+    max-width: $mw;
+}
+
+@mixin chats-padding($ptop, $pright, $pbottom, $pleft) {
+    padding-left: $pleft;
+    padding-bottom: $pbottom;
+    padding-top: $ptop;
+    padding-right: $pright;
+    display: flex;
+}
+
+@mixin chats-margin($ptop, $pright, $pbottom, $pleft) {
+    margin-left: $pleft;
+    margin-bottom: $pbottom;
+    margin-top: $ptop;
+    margin-right: $pright;
+}
+
+@mixin before($btop, $bright, $bbottom, $bleft) {
+    top: $btop;
+    right: $bright;
+    bottom: $bbottom;
+    left: $bleft;
+}
